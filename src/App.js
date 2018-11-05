@@ -17,7 +17,7 @@ class App extends Component {
             <Route exact path={'/'} component={Main}/>
             <Route exact path={'/about'} component={About}/>
             <Route exact path={'/posts'} component={Posts}/>
-            <Route exact path={'/posts/:slug'} component={Post} />
+            <Route exact path={'/posts/:slug'} component={Post}/>
           </Switch>
         </main>
       </React.Fragment>
