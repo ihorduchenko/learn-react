@@ -11,12 +11,10 @@ class PlayJs extends Component {
 
     let cold = ['autumn', 'winter'];
     let warm = ['spring', 'summer'];
-
     console.log([...cold, ...warm]);
 
     cold.push(...warm);
     console.log(cold);
-
 
     return (
       <div className="container">
