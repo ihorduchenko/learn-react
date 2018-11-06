@@ -6,6 +6,7 @@ import Main from './components/main';
 import About from './components/about';
 import Posts from './components/posts';
 import Post from './components/post';
+import PlayJs from "./components/play-js";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path={'/about'} component={About}/>
             <Route exact path={'/posts'} component={Posts}/>
             <Route exact path={'/posts/:slug'} component={Post}/>
+            <Route exact path={'/play-js'} component={PlayJs}/>
           </Switch>
         </main>
       </React.Fragment>

@@ -20,6 +20,9 @@ class Header extends Component{
             <li className="nav-item">
               <NavLink className="nav-link" to="/posts">Posts</NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/play-js">Play JS</NavLink>
+            </li>
           </ul>
         </div>
       </nav>
