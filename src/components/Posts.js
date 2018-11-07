@@ -13,6 +13,7 @@ class Posts extends Component{
 
     this.state = {
       posts: [],
+      reverted: false
     };
   }
 
@@ -24,11 +25,14 @@ class Posts extends Component{
   
 
   render(){
-  	const { posts } = this.state;
+  	const posts = this.state.reverted ? this.state.posts : this.state.posts.slice().reverse();
 		console.log(posts);
     return (
       <div className="container py-5">
       	<h1 className="mb-5">Posts</h1>
+        <div className="pb-5">
+          <button className="btn btn-primary" onClick={this.revert}>Revert</button>
+        </div>
       	<div className="row">
 					{posts.map(post =>
           	<div className="col-md-6 col-xl-4 mb-4" key={post.id}>
@@ -48,6 +52,9 @@ class Posts extends Component{
       </div>
     )  
   }
+
+
+  revert = () => this.setState({reverted: !this.state.reverted});
 }
 
 export default Posts;
