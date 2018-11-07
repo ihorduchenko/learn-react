@@ -27,30 +27,35 @@ class Posts extends Component{
   render(){
   	const posts = this.state.reverted ? this.state.posts : this.state.posts.slice().reverse();
 		console.log(posts);
-    return (
-      <div className="container py-5">
-      	<h1 className="mb-5">Posts</h1>
-        <div className="pb-5">
-          <button className="btn btn-primary" onClick={this.revert}>Revert</button>
+
+		if(posts.length > 0) {
+      return (
+        <div className="container py-5">
+          <h1 className="mb-5">Posts</h1>
+          <div className="pb-5">
+            <button className="btn btn-primary" onClick={this.revert}>Revert</button>
+          </div>
+          <div className="row">
+            {posts.map(post =>
+              <div className="col-md-6 col-xl-4 mb-4" key={post.id}>
+                <div className="card h-100">
+                  <div className="card-body">
+                    <h3 className="card-title">
+                      <NavLink className="text-success" to={'posts/' + post.slug }>
+                        {post.title.rendered}
+                      </NavLink>
+                    </h3>
+                    <div className="card-text" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-      	<div className="row">
-					{posts.map(post =>
-          	<div className="col-md-6 col-xl-4 mb-4" key={post.id}>
-          		<div className="card h-100">
-          			<div className="card-body">
-							    <h3 className="card-title">
-							    	<NavLink className="text-success" to={'posts/' + post.slug }>
-							    		{post.title.rendered}
-							    	</NavLink>
-							    </h3>
-							    <div className="card-text" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-							  </div>
-          		</div>
-          	</div>
-        	)}
-      	</div>
-      </div>
-    )  
+      )
+    } else {
+		  return <div className="container py-5">Loading...</div>;
+    }
   }
 
 
