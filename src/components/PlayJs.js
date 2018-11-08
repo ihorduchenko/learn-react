@@ -9,13 +9,6 @@ class PlayJs extends Component {
     let fruits = ["Banana", "Orange", "Apple", "Mango"];
     let mapping = Array.prototype.map;
 
-    let cold = ['autumn', 'winter'];
-    let warm = ['spring', 'summer'];
-    console.log([...cold, ...warm]);
-
-    cold.push(...warm);
-    console.log(cold);
-
     return (
       <div className="container">
         <div className="py-5">
