@@ -36,7 +36,7 @@ class Post extends Component {
     return (
       <div className="container py-5">
         <div className="row">
-          <div className="col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+          <div className="col-md-10 offset-md-1 col-xl-7 offset-xl-1">
             <h1 className="mb-5">{post.title.rendered}</h1>
             <div className="mb-4">{post.published_date}</div>
             <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />

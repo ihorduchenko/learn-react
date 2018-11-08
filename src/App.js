@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Header from './components/header';
-import Main from './components/main';
-import About from './components/about';
-import Posts from './components/posts';
-import Post from './components/post';
-import PlayJs from "./components/play-js";
-import Articles from "./components/articles";
+import Header from './components/Header';
+import Main from './components/Main';
+import About from './components/About';
+import Posts from './components/Posts';
+import Post from './components/Post';
+import PlayJs from "./components/PlayJs";
+import Articles from "./components/articles/Articles";
 
 class App extends Component {
   render() {
