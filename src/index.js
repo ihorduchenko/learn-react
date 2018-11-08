@@ -1,11 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-
+import React, {Component} from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import Header from './components/Header';
+import Main from './components/Main';
+import Posts from './components/Posts';
+import Post from './components/Post';
+import PlayJs from "./components/PlayJs";
+import Articles from "./components/articles/Articles";
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Header/>
+        <main>
+          <Switch>
+            <Route exact path={'/'} component={Main}/>
+            <Route exact path={'/posts'} component={Posts}/>
+            <Route exact path={'/posts/:slug'} component={Post}/>
+            <Route exact path={'/play-js'} component={PlayJs}/>
+            <Route exact path={'/articles'} component={Articles}/>
+          </Switch>
+        </main>
+      </React.Fragment>
+    );
+  }
+}
+
+export default App;
 
 const routes = (
   <Router>
@@ -16,8 +39,3 @@ const routes = (
 render(
   (routes), document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();

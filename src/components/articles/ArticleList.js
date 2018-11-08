@@ -9,7 +9,7 @@ class ArticleList extends PureComponent {
   render() {
     console.log('---', 2)
     const articleElements = this.props.articles.map((article, index) =>
-      <li key={article.id} className="article-list__li">
+      <li key={article.id}>
         <Article article={article}
                  isOpen={this.state.openArticleId === article.id}
                  onButtonClick={this.handleClick.bind(this, article.id)}

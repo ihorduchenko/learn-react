@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Router, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from 'axios';
-
-import logo from '../logo.svg';
 
 const API = 'http://react-rest/wp-json/wp/v2/';
 const DEFAULT_QUERY = 'posts?per_page=100';
@@ -26,7 +24,7 @@ class Posts extends Component{
 
   render(){
   	const posts = this.state.reverted ? this.state.posts : this.state.posts.slice().reverse();
-		console.log(posts);
+		// console.log(posts);
 
 		if(posts.length > 0) {
       return (

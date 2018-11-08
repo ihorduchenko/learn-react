@@ -31,7 +31,7 @@ class Post extends Component {
 
   render() {
     const {post} = this.state;
-    console.log(post);
+    // console.log(post);
     if(!post) return null;
     return (
       <div className="container py-5">
