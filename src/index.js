@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Header from './components/Header';
@@ -32,7 +32,7 @@ export default App;
 
 const routes = (
   <Router>
-    <Route path="/" component={App} />
+    <Route path="/" component={App}/>
   </Router>
 );
 

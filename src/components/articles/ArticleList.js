@@ -7,7 +7,6 @@ class ArticleList extends PureComponent {
   };
 
   render() {
-    console.log('---', 2)
     const articleElements = this.props.articles.map((article, index) =>
       <li key={article.id}>
         <Article article={article}
@@ -15,7 +14,7 @@ class ArticleList extends PureComponent {
                  onButtonClick={this.handleClick.bind(this, article.id)}
         />
       </li>
-    )
+    );
     return (
       <ul className="list-unstyled">
         {articleElements}
@@ -28,4 +27,4 @@ class ArticleList extends PureComponent {
   })
 }
 
-export default ArticleList;
+export default ArticleList
