@@ -5,9 +5,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Posts from './components/Posts';
-import Post from './components/Post';
+import PostSingle from './components/PostSingle';
 import PlayJs from "./components/PlayJs";
-import Articles from "./components/articles/Articles";
+import Articles from "./components/Articles";
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
           <Switch>
             <Route exact path={'/'} component={Main}/>
             <Route exact path={'/posts'} component={Posts}/>
-            <Route exact path={'/posts/:slug'} component={Post}/>
+            <Route exact path={'/posts/:slug'} component={PostSingle}/>
             <Route exact path={'/play-js'} component={PlayJs}/>
             <Route exact path={'/articles'} component={Articles}/>
           </Switch>

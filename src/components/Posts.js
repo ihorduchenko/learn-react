@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import axios from 'axios';
+import Post from './Post'; 
 
-const API = 'http://react-rest/wp-json/wp/v2/';
+const API = 'http://wp-rest-api.cloudaccess.host/wp-json/wp/v2/';
 const DEFAULT_QUERY = 'posts?per_page=100';
 
 class Posts extends Component{
@@ -24,7 +24,7 @@ class Posts extends Component{
 
   render(){
   	const posts = this.state.reverted ? this.state.posts : this.state.posts.slice().reverse();
-		// console.log(posts);
+		console.log(posts);
 
 		if(posts.length > 0) {
       return (
@@ -36,16 +36,7 @@ class Posts extends Component{
           <div className="row">
             {posts.map(post =>
               <div className="col-md-6 col-xl-4 mb-4" key={post.id}>
-                <div className="card h-100">
-                  <div className="card-body">
-                    <h3 className="card-title">
-                      <NavLink className="text-success" to={'posts/' + post.slug }>
-                        {post.title.rendered}
-                      </NavLink>
-                    </h3>
-                    <div className="card-text" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-                  </div>
-                </div>
+                <Post rec={post}/>
               </div>
             )}
           </div>
