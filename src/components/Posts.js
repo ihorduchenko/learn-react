@@ -11,7 +11,8 @@ class Posts extends Component {
 
     this.state = {
       posts: [],
-      reverted: false
+      reverted: false,
+      openId: null
     };
   }
 
@@ -23,19 +24,23 @@ class Posts extends Component {
 
   render() {
     const posts = this.state.reverted ? this.state.posts : this.state.posts.slice().reverse();
-    console.log(posts);
+    // console.log(posts);
 
     if (posts.length > 0) {
       return (
         <div className="container py-5">
-          <h1 className="mb-5">Posts</h1>
+          <h1 className="display-1 mb-5">Posts</h1>
           <div className="pb-5">
-            <button className="btn btn-primary" onClick={this.revert}>Revert</button>
+            <button className="btn btn-success btn-lg" onClick={this.revert}>Revert</button>
           </div>
           <div className="row">
             {posts.map(post =>
               <div className="col-md-6 col-xl-4 mb-4" key={post.id}>
-                <Post rec={post}/>
+                <Post
+                  isOpen={this.state.openId === post.id}
+                  onButtonClick={this.toggleDescr.bind(this, post.id)}
+                  rec={post}
+                />
               </div>
             )}
           </div>
@@ -48,6 +53,10 @@ class Posts extends Component {
 
 
   revert = () => this.setState({reverted: !this.state.reverted});
+
+  toggleDescr = openId => this.setState({
+    openId: this.state.openId === openId ? null : openId
+  })
 }
 
 export default Posts;

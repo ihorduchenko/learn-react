@@ -3,7 +3,8 @@ import {NavLink} from "react-router-dom";
 
 class Post extends Component {
   render() {
-    const {rec} = this.props;
+    const {rec, isOpen, onButtonClick} = this.props;
+    const descr = isOpen ? <div className="card-text" dangerouslySetInnerHTML={{__html: rec.excerpt.rendered}}/> : '';
     return (
       <div className="card h-100">
         <div className="card-body">
@@ -13,7 +14,10 @@ class Post extends Component {
             </NavLink>
           </h3>
           <div className="mb-3">{(new Date(rec.date)).toDateString()}</div>
-          <div className="card-text" dangerouslySetInnerHTML={{__html: rec.excerpt.rendered}}/>
+          <div className="mb-3">
+            <button className="btn btn-success btn-sm" onClick={onButtonClick}>{isOpen ? 'Close' : 'Open'}</button>
+          </div>
+          {descr}
         </div>
       </div>
     );

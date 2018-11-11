@@ -8,6 +8,7 @@ import Posts from './components/Posts';
 import PostSingle from './components/PostSingle';
 import PlayJs from "./components/PlayJs";
 import Articles from "./components/Articles";
+import ReduxLearn from "./components/ReduxLearn";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route exact path={'/posts/:slug'} component={PostSingle}/>
             <Route exact path={'/play-js'} component={PlayJs}/>
             <Route exact path={'/articles'} component={Articles}/>
+            <Route exact path={'/redux-learn'} component={ReduxLearn}/>
           </Switch>
         </main>
       </React.Fragment>
