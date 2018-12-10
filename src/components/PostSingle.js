@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-const API = 'http://wp-rest-api.cloudaccess.host/wp-json/wp/v2/';
+const API = '//wp-rest-api.cloudaccess.host/wp-json/wp/v2/';
 const DEFAULT_QUERY = 'posts';
 
 class Post extends Component {
