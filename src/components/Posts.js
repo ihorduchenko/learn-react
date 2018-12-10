@@ -30,6 +30,7 @@ class Posts extends Component {
       return (
         <div className="container py-5">
           <h1 className="display-1 mb-5">Posts</h1>
+          <p>Listing WordPress posts using React and WordPress REST API</p>
           <div className="pb-5">
             <button className="btn btn-success btn-lg" onClick={this.revert}>Revert</button>
           </div>
