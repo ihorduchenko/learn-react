@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import List from './List';
 
 class ReduxLearn extends Component{
   render() {
     return (
-      <div>Redux</div>
+      <div className="container my-5">
+        Redux
+        <List/>
+      </div>
     );
   }
 }
