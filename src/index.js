@@ -23,9 +23,9 @@ class App extends Component {
               <Route exact path={'/'} component={Main}/>
               <Route exact path={'/posts'} component={Posts}/>
               <Route exact path={'/posts/:slug'} component={PostSingle}/>
-              <Route exact path={'/play-js'} component={PlayJs}/>
               <Route exact path={'/articles'} component={Articles}/>
               <Route exact path={'/redux-learn'} component={ReduxLearn}/>
+              <Route exact path={'/play-js'} component={PlayJs}/>
             </Switch>
           </main>
         </React.Fragment>

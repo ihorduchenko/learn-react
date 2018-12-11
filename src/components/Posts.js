@@ -29,10 +29,11 @@ class Posts extends Component {
     if (posts.length > 0) {
       return (
         <div className="container py-5">
-          <h1 className="display-1 mb-5">Posts</h1>
-          <p>Listing WordPress posts using React and WordPress REST API</p>
-          <div className="pb-5">
-            <button className="btn btn-success btn-lg" onClick={this.revert}>Revert</button>
+          <h1 className="display-3 mb-3">Posts</h1>
+          <p className="lead">Listing WordPress posts using React and WordPress REST API</p>
+          <hr className="my-4" />
+          <div className="pb-4">
+            <button className="btn btn-info" onClick={this.revert}>Revert order</button>
           </div>
           <div className="row">
             {posts.map(post =>
