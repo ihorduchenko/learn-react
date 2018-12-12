@@ -12,8 +12,10 @@ class Articles extends PureComponent {
     return (
       <React.Fragment>
         <div className="jumbotron">
-          <h1 className="display-4 mb-5">Displaying articles from JSON</h1>
-          <button className="btn btn-primary" onClick={this.revert}>Revert</button>
+          <div className="container">
+            <h1 className="display-4 mb-5">Displaying articles from JSON</h1>
+            <button className="btn btn-primary" onClick={this.revert}>Revert</button>
+          </div>
         </div>
         <div className="container">
           <div className="row">

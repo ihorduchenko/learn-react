@@ -4,13 +4,13 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './store';
 
-import Header from './components/Header';
+import Header from './components/default/Header';
 import Main from './components/Main';
 import Posts from './components/Posts';
-import PostSingle from './components/PostSingle';
+import PostSingle from './components/posts/PostSingle';
 import PlayJs from "./components/PlayJs";
 import Articles from "./components/Articles";
-import ReduxLearn from "./components/ReduxLearn";
+import ReduxLearn from "./components/Redux-01";
 
 class App extends Component {
   render() {

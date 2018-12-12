@@ -19,7 +19,7 @@ class Home extends Component {
                 <div className="card-header">
                   <h3>Covered things:</h3>
                 </div>
-                <ul className="list-group">
+                <ul className="list-group list-group-flush">
                   <li className="list-group-item">Listing posts using WordPress REST API</li>
                   <li className="list-group-item">Listing articles from JSON</li>
                   <li className="list-group-item">Using Redux to add new articles</li>

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import store from "../store/index";
 import { addArticle } from "../actions/index";
 
-import List from './List';
-import Form from './Form';
+import List from './redux/List';
+import Form from './redux/Form';
 
 class ReduxLearn extends Component{
   render() {

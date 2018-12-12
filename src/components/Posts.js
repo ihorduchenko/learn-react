@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Post from './Post';
+import Post from './posts/Post';
 
 const API = '//wp-rest-api.cloudaccess.host/wp-json/wp/v2/';
 const DEFAULT_QUERY = 'posts?per_page=100';
