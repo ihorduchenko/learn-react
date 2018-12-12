@@ -23,12 +23,12 @@ class Header extends Component {
                 <NavLink className="nav-link" to="/articles">JSON posts</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/redux-learn">Redux Learn</NavLink>
-              </li>
-              <li className="nav-item mr-md-auto">
-                <NavLink className="nav-link" to="/play-js">Play JS</NavLink>
+                <NavLink className="nav-link" to="/redux-learn-1">Redux 1</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to="/redux-learn-2">Redux 2</NavLink>
+              </li>
+              <li className="nav-item ml-md-auto">
                 <a target="_blank" rel="noopener noreferrer" className="nav-link" href="http://ihorduchenko.cloudaccess.host">Author's site</a>
               </li>  
             </ul>

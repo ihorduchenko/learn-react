@@ -8,9 +8,10 @@ import Header from './components/default/Header';
 import Main from './components/Main';
 import Posts from './components/Posts';
 import PostSingle from './components/posts/PostSingle';
-import PlayJs from "./components/PlayJs";
 import Articles from "./components/Articles";
-import ReduxLearn from "./components/Redux-01";
+import ReduxLearn1 from "./components/Redux-01";
+import ReduxLearn2 from "./components/Redux-02";
+import PlayJs from "./components/PlayJs";
 
 class App extends Component {
   render() {
@@ -24,7 +25,8 @@ class App extends Component {
               <Route exact path={'/posts'} component={Posts}/>
               <Route exact path={'/posts/:slug'} component={PostSingle}/>
               <Route exact path={'/articles'} component={Articles}/>
-              <Route exact path={'/redux-learn'} component={ReduxLearn}/>
+              <Route exact path={'/redux-learn-1'} component={ReduxLearn1}/>
+              <Route exact path={'/redux-learn-2'} component={ReduxLearn2}/>
               <Route exact path={'/play-js'} component={PlayJs}/>
             </Switch>
           </main>
@@ -33,8 +35,6 @@ class App extends Component {
     );
   }
 }
-
-export default App;
 
 const routes = (
   <Router>

@@ -5,7 +5,7 @@ import { addArticle } from "../actions/index";
 import List from './redux/List';
 import Form from './redux/Form';
 
-class ReduxLearn extends Component{
+class ReduxLearn1 extends Component{
   render() {
     return (
     	<div className="container my-5">
@@ -29,4 +29,4 @@ store.subscribe(() => console.log('Look ma, Redux!!'));
 window.store = store;
 window.addArticle = addArticle;
 
-export default ReduxLearn;
+export default ReduxLearn1;
