@@ -11,15 +11,13 @@ class Articles extends PureComponent {
     console.log(this.state.reverted);
     return (
       <React.Fragment>
-        <div className="jumbotron">
-          <div className="container">
-            <h1 className="display-4 mb-5">Displaying articles from JSON</h1>
-            <button className="btn btn-primary" onClick={this.revert}>Revert</button>
-          </div>
-        </div>
-        <div className="container">
+        <div className="container py-5">
+          <h1 className="display-3 mb-3">Displaying articles from JSON</h1>
+          <p className="mb-5">
+            <button className="btn btn-info" onClick={this.revert}>Revert</button>
+          </p>
           <div className="row">
-            <div className="col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+            <div className="col-md-8 col-xl-6">
               <ArticleList articles={this.state.reverted ? articles.slice().reverse() : articles}/>
             </div>
           </div>

@@ -29,7 +29,7 @@ class Posts extends Component {
     if (posts.length > 0) {
       return (
         <div className="container py-5">
-          <h1 className="display-3 mb-3">Posts</h1>
+          <h1 className="display-3 mb-3">WordPress Posts</h1>
           <p className="lead">Listing WordPress posts using React and WordPress REST API</p>
           <hr className="my-4" />
           <div className="pb-4">
