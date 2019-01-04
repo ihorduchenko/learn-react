@@ -21,13 +21,13 @@ class App extends Component {
           <Header/>
           <main>
             <Switch>
-              <Route exact path={'/'} component={Main}/>
-              <Route exact path={'/posts'} component={Posts}/>
-              <Route exact path={'/posts/:slug'} component={PostSingle}/>
-              <Route exact path={'/articles'} component={Articles}/>
-              <Route exact path={'/redux-learn-1'} component={ReduxLearn1}/>
-              <Route exact path={'/redux-learn-2'} component={ReduxLearn2}/>
-              <Route exact path={'/play-js'} component={PlayJs}/>
+              <Route exact path='/' component={Main}/>
+              <Route path='/posts' component={Posts}/>
+              <Route path='/posts/:slug' component={PostSingle}/>
+              <Route path='/articles' component={Articles}/>
+              <Route path='/redux-learn-1' component={ReduxLearn1}/>
+              <Route path='/redux-learn-2' component={ReduxLearn2}/>
+              <Route path='/play-js' component={PlayJs}/>
             </Switch>
           </main>
         </React.Fragment>

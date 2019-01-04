@@ -5,8 +5,8 @@ class Header extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md navbar-light bg-light">
-        <div className="container">
-          <NavLink className="navbar-brand" to="/">Learn React/Redux</NavLink>
+        <div className="container"> 
+          <NavLink className="navbar-brand" exact to="/">Learn React/Redux</NavLink>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                   aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav w-100">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink exact className="nav-link" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/posts">WP posts</NavLink>
