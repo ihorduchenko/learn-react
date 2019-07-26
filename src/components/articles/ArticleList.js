@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react'
-import Article from './Article'
+import React, {PureComponent} from 'react';
+import Article from './Article';
 
 class ArticleList extends PureComponent {
   state = {

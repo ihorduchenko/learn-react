@@ -22,8 +22,7 @@ class Home extends Component {
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">Listing posts using WordPress REST API</li>
                   <li className="list-group-item">Listing articles from JSON</li>
-                  <li className="list-group-item">Using Redux to add new articles</li>
-                  <li className="list-group-item">Playing with JS Arrays</li>
+                  <li className="list-group-item">Redux TODO lists</li>
                 </ul>
               </div>
             </div>

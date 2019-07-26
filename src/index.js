@@ -9,9 +9,7 @@ import Main from './components/Main';
 import Posts from './components/Posts';
 import PostSingle from './components/posts/PostSingle';
 import Articles from "./components/Articles";
-import ReduxLearn1 from "./components/Redux-01";
-import ReduxLearn2 from "./components/Redux-02";
-import PlayJs from "./components/PlayJs";
+import TodosMain from "./components/TodosMain";
 
 class App extends Component {
   render() {
@@ -25,9 +23,7 @@ class App extends Component {
               <Route path='/posts' component={Posts}/>
               <Route path='/posts/:slug' component={PostSingle}/>
               <Route path='/articles' component={Articles}/>
-              <Route path='/redux-learn-1' component={ReduxLearn1}/>
-              <Route path='/redux-learn-2' component={ReduxLearn2}/>
-              <Route path='/play-js' component={PlayJs}/>
+              <Route path='/todos' component={TodosMain}/>
             </Switch>
           </main>
         </React.Fragment>
