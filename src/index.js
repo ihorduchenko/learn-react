@@ -20,10 +20,10 @@ class App extends Component {
           <main>
             <Switch>
               <Route exact path='/' component={Main}/>
-              <Route path='/posts' component={Posts}/>
-              <Route path='/posts/:slug' component={PostSingle}/>
-              <Route path='/articles' component={Articles}/>
-              <Route path='/todos' component={TodosMain}/>
+              <Route exact path='/posts' component={Posts}/>
+              <Route exact path='/posts/:slug' component={PostSingle}/>
+              <Route exact path='/articles' component={Articles}/>
+              <Route exact path='/todos' component={TodosMain}/>
             </Switch>
           </main>
         </React.Fragment>

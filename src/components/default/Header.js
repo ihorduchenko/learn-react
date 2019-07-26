@@ -14,9 +14,6 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav w-100">
               <li className="nav-item">
-                <NavLink exact className="nav-link" to="/">Home</NavLink>
-              </li>
-              <li className="nav-item">
                 <NavLink className="nav-link" to="/posts">WP posts</NavLink>
               </li>
               <li className="nav-item">
@@ -26,7 +23,7 @@ class Header extends Component {
                 <NavLink className="nav-link" to="/todos">TODO's</NavLink>
               </li>
               <li className="nav-item ml-md-auto">
-                <a target="_blank" rel="noopener noreferrer" className="nav-link" href="http://ihorduchenko.cloudaccess.host">Author's site</a>
+                <a target="_blank" rel="noopener noreferrer" className="nav-link" href="https://ihorduchenko.cloudaccess.host">Author's site</a>
               </li>  
             </ul>
           </div>
