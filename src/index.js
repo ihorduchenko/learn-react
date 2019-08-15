@@ -10,6 +10,7 @@ import Posts from './components/Posts';
 import PostSingle from './components/posts/PostSingle';
 import Articles from "./components/Articles";
 import TodosMain from "./components/TodosMain";
+import Refs from "./components/other/Refs";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path='/posts/:slug' component={PostSingle}/>
               <Route exact path='/articles' component={Articles}/>
               <Route exact path='/todos' component={TodosMain}/>
+              <Route exact path='/refs' component={Refs}/>
             </Switch>
           </main>
         </React.Fragment>
