@@ -4,13 +4,15 @@ class Refs extends Component {
   constructor(props) {
     super(props);
     this.textInput = React.createRef();
+    this.button = React.createRef();
     this.focusTextInput = this.focusTextInput.bind(this);
   }
 
   focusTextInput() {
     console.log(this.textInput.current.className);
+    console.log(this.button);
     this.textInput.current.focus();
-    this.textInput.current.value = '111';
+    this.textInput.current.value = 'Predefined value';
   }
 
   render() {
@@ -22,9 +24,10 @@ class Refs extends Component {
           ref={this.textInput} />
 
         <input
-            type="button"
-            value="Focus the text input"
-            onClick={this.focusTextInput}
+          type="button"
+          value="Focus the text input"
+          onClick={this.focusTextInput}
+          ref={this.button}
         />
       </div>
     );
