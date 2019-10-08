@@ -1,8 +1,8 @@
-import * as types from "../actions/types";
+import * as types from '../actions/types';
 
-const forbiddenWords = ["spam", "money"];
+const forbiddenWords = ['spam', 'money'];
 
-export function forbiddenWordsMiddleware({ dispatch }) {
+export function forbiddenWordsMiddleware(store) {
   return function(next) {
     return function(action) {
       if (action.type === types.ADD_TODO) {
@@ -11,7 +11,7 @@ export function forbiddenWordsMiddleware({ dispatch }) {
           action.payload.text.includes(word)
         );
         if (foundWord.length) {
-          return dispatch({ type: "FOUND_BAD_WORD" });
+          return store.dispatch({ type: types.FOUND_BAD_WORD });
         }
       }
       return next(action);

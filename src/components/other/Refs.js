@@ -18,17 +18,29 @@ class Refs extends Component {
   render() {
     return (
       <div className="container py-5">
-        <input
-          className="ref-input"
-          type="text"
-          ref={this.textInput} />
-
-        <input
-          type="button"
-          value="Focus the text input"
-          onClick={this.focusTextInput}
-          ref={this.button}
-        />
+        <h1 className="display-3 mb-3">React Refs demo</h1>
+        <p className="lead">Using React Refs to bind focus into text field</p>
+        <hr className="my-4" />
+        <div className="row">
+          <div className="col-md-8">
+            <div className="input-group input-group-lg">
+              <div className="input-group-prepend">
+                <input
+                  type="button"
+                  className="btn btn-primary"
+                  value="Focus the text input"
+                  onClick={this.focusTextInput}
+                  ref={this.button}
+                />
+              </div>
+              <input
+                className="ref-input form-control text-right"
+                type="text"
+                ref={this.textInput} 
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

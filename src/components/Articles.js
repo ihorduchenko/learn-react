@@ -12,9 +12,11 @@ class Articles extends PureComponent {
     return (
       <React.Fragment>
         <div className="container py-5">
-          <h1 className="display-3 mb-3">Displaying articles from JSON</h1>
+          <h1 className="display-3 mb-3">JSON posts</h1>
+          <p className="lead">Displaying articles from JSON</p>
+          <hr className="my-4" />
           <p className="mb-5">
-            <button className="btn btn-info" onClick={this.revert}>Revert</button>
+            <button className="btn btn-info" onClick={this.revert}>Change order</button>
           </p>
           <div className="row">
             <div className="col-md-8 col-xl-6">

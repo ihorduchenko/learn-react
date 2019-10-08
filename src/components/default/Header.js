@@ -26,7 +26,7 @@ class Header extends Component {
                 <NavLink className="nav-link" to="/refs">Refs</NavLink>
               </li>
               <li className="nav-item ml-md-auto">
-                <a target="_blank" rel="noopener noreferrer" className="nav-link" href="https://ihorduchenko.cloudaccess.host">Author's site</a>
+                <a target="_blank" rel="noopener noreferrer" className="nav-link" href="https://ihorduchenko.cloudaccess.host">My site</a>
               </li>  
             </ul>
           </div>

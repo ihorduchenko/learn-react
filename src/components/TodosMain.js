@@ -7,7 +7,9 @@ const TodosMain = () => (
     <div className="container">
       <div className="row">
         <div className="col-md-8 mb-5">
-          <h1 className="mb-3">Add your todo</h1>
+          <h1 className="display-3 mb-3">Todo List</h1>
+          <p className="lead">Add your todo</p>
+          <hr className="my-4" />
           <div className="alert alert-secondary" role="alert">
             Words "money" and "spam" are filtered using redux middleware function.
           </div>

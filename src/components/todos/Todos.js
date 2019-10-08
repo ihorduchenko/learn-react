@@ -6,7 +6,7 @@ const Empty = () => <div className="col-md-12"><div className="alert alert-dange
 const Todos = ({ todos, deleteTodo }) => (
   <div className="row">
     <div className="col-md-12">
-      <h3 className="mb-3">Your todos list</h3>
+      <h3 className="mb-3">Your todo's</h3>
     </div>
     {todos.length > 0 ? 
     todos.map(todo => 

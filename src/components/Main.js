@@ -23,6 +23,7 @@ class Home extends Component {
                   <li className="list-group-item">Listing posts using WordPress REST API</li>
                   <li className="list-group-item">Listing articles from JSON</li>
                   <li className="list-group-item">Redux TODO lists</li>
+                  <li className="list-group-item">React Refs demo</li>
                 </ul>
               </div>
             </div>
