@@ -4,7 +4,7 @@ class Home extends Component {
   render() {
     return (
       <main className="page-home">
-        <div className="jumbotron">
+        <div className="jumbotron mb-0 py-5">
           <div className="container text-center">
             <h1 className="display-3 mb-3">Learning React</h1>
             <p className="lead">This is educational project of me, where I trying to React/Redux</p>
@@ -24,7 +24,8 @@ class Home extends Component {
                   <li className="list-group-item">Listing articles from JSON</li>
                   <li className="list-group-item">Redux TODO lists</li>
                   <li className="list-group-item">React Refs demo</li>
-                  <li className="list-group-item">Counter</li>
+                  <li className="list-group-item">Async Counter</li>
+                  <li className="list-group-item">React Hooks</li>
                 </ul>
               </div>
             </div>

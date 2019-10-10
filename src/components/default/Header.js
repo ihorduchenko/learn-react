@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <nav className="navbar navbar-expand-md navbar-light bg-light">
         <div className="container"> 
-          <NavLink className="navbar-brand" exact to="/">Learn React/Redux</NavLink>
+          <NavLink className="navbar-brand" exact to="/">React/Redux</NavLink>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                   aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -20,13 +20,16 @@ class Header extends Component {
                 <NavLink className="nav-link" to="/articles">JSON posts</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/todos">TODO's</NavLink>
+                <NavLink className="nav-link" to="/todos">ToDo's</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/refs">Refs</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/counter">Counter</NavLink>
+                <NavLink className="nav-link" to="/counter">Async</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/hooks">Hooks</NavLink>
               </li>
               <li className="nav-item ml-md-auto">
                 <a target="_blank" rel="noopener noreferrer" className="nav-link" href="https://ihorduchenko.cloudaccess.host">My site</a>
