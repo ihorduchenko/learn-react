@@ -24,6 +24,7 @@ class Home extends Component {
                   <li className="list-group-item">Listing articles from JSON</li>
                   <li className="list-group-item">Redux TODO lists</li>
                   <li className="list-group-item">React Refs demo</li>
+                  <li className="list-group-item">Counter</li>
                 </ul>
               </div>
             </div>
