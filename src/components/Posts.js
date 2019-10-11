@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Post from './posts/Post';
-
-const API = '//wp-rest-api.cloudaccess.host/wp-json/wp/v2/';
-const DEFAULT_QUERY = 'posts?per_page=100';
+import {API_URL, DEFAULT_QUERY} from '../constants';
 
 class Posts extends Component {
   constructor(props) {
@@ -16,8 +14,8 @@ class Posts extends Component {
     };
   }
 
-  componentWillMount() {
-    axios.get(API + DEFAULT_QUERY)
+  componentDidMount() {
+    axios.get(API_URL + DEFAULT_QUERY)
       .then(res => this.setState({posts: res.data}));
   }
 

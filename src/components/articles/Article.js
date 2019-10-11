@@ -5,18 +5,14 @@ class Article extends PureComponent {
     super(props);
 
     this.state = {
-      count: 0
+      count: 0,
+      isOpen: false
     }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
-      isOpen: nextProps.defaultOpen
-    })
   }
 
   render() {
     const {article, isOpen, onButtonClick} = this.props;
+
     const body = isOpen ? <section className="card-text pt-2">{article.text}</section> : '';
     return (
       <div className="card mx-auto my-4">

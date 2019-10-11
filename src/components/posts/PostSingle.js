@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
-const API = '//wp-rest-api.cloudaccess.host/wp-json/wp/v2/';
-const DEFAULT_QUERY = 'posts';
+import {API_URL, DEFAULT_QUERY} from '../../constants';
 
 class Post extends Component {
   constructor(props) {
@@ -20,11 +18,11 @@ class Post extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let url = window.location.href.split("/");
     let slug = url.pop() || url.pop();
 
-    axios.get(API + DEFAULT_QUERY + '?slug=' + slug)
+    axios.get(API_URL + DEFAULT_QUERY + '&slug=' + slug)
       .then(res => this.setState({post: res.data[0]}))
       .catch(err => console.log(err));
   }

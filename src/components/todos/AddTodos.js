@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../../actions';
 
-// Class way
 class AddTodos extends React.Component {
   state = {
     text: '',
@@ -45,26 +44,6 @@ class AddTodos extends React.Component {
     );
   }
 }
-
-// Functional way
-// const AddTodos = ({ dispatch }) => (
-//   <form onSubmit={(e) => {
-//     e.preventDefault();
-//     let input = e.target.text;
-//     let val = input.value;
-//     if(val.trim().length > 0) {
-//       dispatch(addTodo(val));
-//     }
-//     input.value = null;
-//   }}>
-//     <div className="input-group mb-3">
-//       <input className="form-control" name="text" type="text" placeholder="Name"/>
-//       <div class="input-group-append">
-//         <input className="btn btn-primary" type="submit" value="Add" />
-//       </div>
-//     </div>
-//   </form>
-// )
 
 const mapStateToProps = state => ({
   todos: state.todos
