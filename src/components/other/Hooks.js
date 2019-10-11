@@ -18,10 +18,9 @@ const Hooks = () => {
         res => {
           setPosts(res.data)
         }
-      );
-      request.finally(
+      ).then(
         setPostsLoading(false)
-      )
+      );
     }
     postsLoaded && fetchPosts();
   }, [postsLoaded, postsLoading])
