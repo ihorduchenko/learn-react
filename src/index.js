@@ -13,6 +13,7 @@ import TodosMain from './components/TodosMain';
 import Refs from './components/other/Refs';
 import Counter from './components/other/Counter';
 import Hooks from './components/other/Hooks';
+import Sagas from './components/other/Sagas';
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
               <Route exact path='/refs' component={Refs}/>
               <Route exact path='/counter' component={Counter}/>
               <Route exact path='/hooks' component={Hooks}/>
+              <Route exact path='/sagas' component={Sagas}/>
             </Switch>
           </main>
         </React.Fragment>

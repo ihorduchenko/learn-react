@@ -26,6 +26,7 @@ class Home extends Component {
                   <li className="list-group-item">React Refs demo</li>
                   <li className="list-group-item">Async Counter</li>
                   <li className="list-group-item">React Hooks</li>
+                  <li className="list-group-item">Redux Sagas</li>
                 </ul>
               </div>
             </div>

@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {API_URL, DEFAULT_QUERY} from '../../constants';
 
-const {log} = console;
-
 const Hooks = () => {
   const [count, handleCount] = useState(0);
   const [postsLoading, triggerPostsLoading] = useState(false);
