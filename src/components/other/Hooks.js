@@ -6,29 +6,29 @@ const {log} = console;
 
 const Hooks = () => {
   const [count, handleCount] = useState(0);
-  const [postsLoaded, triggerLoading] = useState(false);
-  const [postsLoading, setPostsLoading] = useState(false);
+  const [postsLoading, triggerPostsLoading] = useState(false);
+  const [postsLoaded, triggerPostsLoaded] = useState(false);
   const [posts, setPosts] = useState([]);
 
+  const fetchPosts = () => {
+    let request = axios.get(API_URL + DEFAULT_QUERY);
+    request.then(
+      res => {
+        setPosts(res.data);
+        triggerPostsLoading(false);
+        triggerPostsLoaded(true);
+      }
+    )
+  }
+
   useEffect(() => {
-    const fetchPosts = () => {
-      setPostsLoading(true);
-      let request = axios.get(API_URL + DEFAULT_QUERY);
-      request.then(
-        res => {
-          setPosts(res.data)
-        }
-      ).then(
-        setPostsLoading(false)
-      );
-    }
-    postsLoaded && fetchPosts();
-  }, [postsLoaded, postsLoading])
+    postsLoading && fetchPosts();
+  }, [postsLoading])
 
   return (
     <div className="container py-5">
       <h1 className="display-3 mb-3">Hooks</h1>
-      <p className="lead">Using React Hooks</p>
+      <p className="lead">Using React Hooks: Counter and Fetch examples</p>
       <hr className="my-4" />
 
       <div className="row mb-5">
@@ -61,18 +61,18 @@ const Hooks = () => {
             className="btn btn-primary mb-3" 
             type="button"
             onClick={() => {
-              setPostsLoading(true);
-              triggerLoading(true);
+              triggerPostsLoading(true);
             }}
           >
-            Fetch
+            {!postsLoading ? 'Fetch' : 'Fetching...'}
           </button>  
         )}
-        { postsLoading ? 'Loading' : (
-          posts.length > 0 && posts.map((p, i) => (
-            <div key={i}>
+        
+        { posts.length > 0 && (
+          posts.map((p, i) => (
+            <div key={p.id}>
               {p.title.rendered}
-            </div>  
+            </div>
           ))
         )}
       </div>
