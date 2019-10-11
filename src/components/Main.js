@@ -4,12 +4,12 @@ class Home extends Component {
   render() {
     return (
       <main className="page-home">
-        <div className="jumbotron mb-0 py-5">
+        <div className="py-5">
           <div className="container text-center">
             <h1 className="display-3 mb-3">Learning React</h1>
-            <p className="lead">This is educational project of me, where I trying to React/Redux</p>
+            <p className="lead">This is learning project, where I'm trying to use newest React/Redux stuff.</p>
             <hr/>
-            <p>GitHub repository: <a href="https://github.com/ihorduchenko/learn-react">https://github.com/ihorduchenko/learn-react</a></p>
+            <p>GitHub repository: <a rel="noopener noreferrer" target="_blank" href="https://github.com/ihorduchenko/learn-react">https://github.com/ihorduchenko/learn-react</a></p>
           </div>
         </div>
         <div className="container">
