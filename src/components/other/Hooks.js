@@ -7,19 +7,24 @@ const {log} = console;
 const Hooks = () => {
   const [count, handleCount] = useState(0);
   const [postsLoaded, triggerLoading] = useState(false);
+  const [postsLoading, setPostsLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = () => {
+      setPostsLoading(true);
       let request = axios.get(API_URL + DEFAULT_QUERY);
       request.then(
-        res => setPosts(res.data)
+        res => {
+          setPosts(res.data)
+        }
       );
+      request.finally(
+        setPostsLoading(false)
+      )
     }
     postsLoaded && fetchPosts();
-  }, [postsLoaded])
-  
-  log(postsLoaded);
+  }, [postsLoaded, postsLoading])
 
   return (
     <div className="container py-5">
@@ -56,16 +61,21 @@ const Hooks = () => {
           <button 
             className="btn btn-primary mb-3" 
             type="button"
-            onClick={() => triggerLoading(true)}
+            onClick={() => {
+              setPostsLoading(true);
+              triggerLoading(true);
+            }}
           >
             Fetch
           </button>  
         )}
-        {posts.length > 0 && posts.map((p, i) => (
-          <div key={i}>
-            {p.title.rendered}
-          </div>  
-        ))}
+        { postsLoading ? 'Loading' : (
+          posts.length > 0 && posts.map((p, i) => (
+            <div key={i}>
+              {p.title.rendered}
+            </div>  
+          ))
+        )}
       </div>
     </div>
   )
