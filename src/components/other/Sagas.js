@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const {log} = console;
+const { log } = console;
 
 class Sagas extends Component {
 
